@@ -1,8 +1,7 @@
-import Com from './Com'
 function App() {
   return (
 <>
-<Com/>
+
 </>
   )
 }
