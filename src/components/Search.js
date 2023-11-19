@@ -1,11 +1,28 @@
-function Search() {
+import './Search.css'
+function Search({ handleSubmit, handleChange, searchString}) {
     return(
-        <form>
-            <input type="txt" placeholder="This is our search form"/>
-
-
-
-        </form>
+        <>
+            <h1 id="searchtitle">💨⛈️ Search Here To See the Weather Where You Are ❄️☀️</h1>
+            <form onSubmit={handleSubmit} id="searchform">
+                <input
+                    className='inputs'
+                    type="txt" 
+                    placeholder="State"
+                    required
+                    onChange={handleChange}
+                    value={searchString}
+                />
+                <input
+                    className='inputs'
+                    type="txt" 
+                    placeholder="City"
+                    required
+                    onChange={handleChange}
+                    value={searchString}
+                />
+                <button id='searchbutton' type="Submit">Search</button>
+            </form>
+        </>
 
     )
 }

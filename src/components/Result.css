@@ -1,0 +1,9 @@
+h1 {
+    color: white;
+    text-align: center;
+}
+hr {
+    height: 10px;
+    border: none;
+    background-color: lime;
+}

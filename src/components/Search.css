@@ -1,0 +1,21 @@
+#searchtitle{
+    text-align: center;
+    color: #fff;
+}
+#searchform {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 18px;
+}
+.inputs {
+    font-size: 30px;
+    text-align: center;
+}
+#searchbutton{
+font-size: 30px;
+
+}
+button:hover{
+    background-color: aqua;
+}

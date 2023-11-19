@@ -1,15 +1,14 @@
+import "./Header.css"
 function Header() {
     return(
-        
-        <header>
+    <>
+        <div id="headerbox">
 
-            <nav>
+            <h1>Welcome To My Weather-Tracker Application</h1>
+            
+        </div>
 
-                <h1>Heres our header</h1>
-
-            </nav>
-
-        </header>
+    </>    
 
     )
 }

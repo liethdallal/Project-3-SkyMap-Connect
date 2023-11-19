@@ -3,8 +3,11 @@ A Weather Tracker application. It incorporates a weather API that allows the use
 
 ### List of components and their children components if any
 -Header Component 
+
 -Forcast Component (displays result)
+
 -Search Form Component 
+
 -Footer Component 
 
 
@@ -28,7 +31,8 @@ A Weather Tracker application. It incorporates a weather API that allows the use
 -Should be easy to operate 
 
 ### Stretch Goals 
--Make a full detailed display of specific days the user clicks on 
+-Make a full detailed display of specific days the user clicks on
+
 -Maybe make the application any country instead of just a U.S API 
 
 
