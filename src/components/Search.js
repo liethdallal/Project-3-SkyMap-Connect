@@ -7,14 +7,6 @@ function Search({ handleSubmit, handleChange, searchString}) {
                 <input
                     className='inputs'
                     type="txt" 
-                    placeholder="State"
-                    required
-                    onChange={handleChange}
-                    value={searchString}
-                />
-                <input
-                    className='inputs'
-                    type="txt" 
                     placeholder="City"
                     required
                     onChange={handleChange}
