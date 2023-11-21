@@ -1,4 +1,6 @@
 import './Search.css'
+
+//to acess we edo env.{url name not in brackets}
 function Search({ handleSubmit, handleChange, searchString}) {
     return(
         <>
