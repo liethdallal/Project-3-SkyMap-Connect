@@ -38,4 +38,4 @@ A Weather Tracker application. It incorporates a weather API that allows the use
 
 ### Wireframes
 
-![Screenshot 2023-11-20 at 10 11 47 AM](https://media.git.generalassemb.ly/user/49500/files/fd484211-bd7b-4bbf-a9ff-f9e4c8ac484a)
+![Screenshot 2023-11-20 at 10 11 35 PM](https://media.git.generalassemb.ly/user/49500/files/5f271c97-983f-472f-be59-b7b5a439deb0)
