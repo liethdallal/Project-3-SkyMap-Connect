@@ -1,6 +1,7 @@
 #searchtitle{
     text-align: center;
     color: #fff;
+    margin: 0px;
 }
 #searchform {
 display: flex;
@@ -18,4 +19,8 @@ font-size: 30px;
 }
 button:hover{
     background-color: aqua;
+}
+#searchcomponent{
+    background-color: black;
+    height: 150px;
 }

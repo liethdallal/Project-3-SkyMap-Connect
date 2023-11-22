@@ -1,20 +1,24 @@
 import React from 'react';
-import "./Result.css"
+import './Result.css';
 
 function Result({ weatherData }) {
-  if (!weatherData) {
-    return null; 
-  }
   return (
-    
-    <div>
-      <hr/>
-      <h2 id='title'>Weather Results</h2>
-      <p id='cityname'>City: {weatherData.name }, {weatherData.sys.country}</p>
-      <p id='temperture'>Temperature: {weatherData.main.temp} °F</p>
-    </div>
+    <>
+      {weatherData ? (
+        <div>
+          <h2 id='title'>Weather Results</h2>
+          <p id='cityname'>City: {weatherData.name}, {weatherData.sys.country}</p>
+          <p id='temperture'>Temperature: {weatherData.main.temp} °F</p>
+        </div>
+      ) : (
+        <div id="no-results">
+          <p>No results found for the entered city.</p>
+        </div>
+      )}
+    </>
   );
 }
 
-
 export default Result;
+
+

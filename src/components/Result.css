@@ -1,10 +1,12 @@
-h2, p{
-    color: white;
-    font-size: 30px;
-    text-align: center;
+#title{
+font-size: 55px;
 }
-hr {
-    border: none;
-    background-color: aquamarine;
-    height: 10px;
+#cityname{
+    font-size: 55px;
+
 }
+#temperture{
+    font-size: 55px;
+
+}
+
