@@ -1,15 +1,10 @@
-h1{
+h2, p{
     color: white;
+    font-size: 30px;
     text-align: center;
 }
-p{
-    color: white;
-}
-h2{
-    color: white;
-}
 hr {
-    height: 10px;
     border: none;
-    background-color: lime;
+    background-color: aquamarine;
+    height: 10px;
 }

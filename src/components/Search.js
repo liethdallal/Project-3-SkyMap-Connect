@@ -9,26 +9,20 @@ function Search({ handleChange, searchString }) {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    if (!searchString || searchString.trim() === '') {
-      console.log('Search string is empty or undefined');
-      return;
-    }
-
     const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
     const url = `${baseUrl}?q=${searchString}&appid=${REACT_APP_API_KEY}&units=imperial`;
 
     try {
-      console.log('Fetching weather data...');
       const response = await fetch(url);
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('no response');
       }
 
       const data = await response.json();
-      console.log('Weather data:', data);
+      console.log('info:', data);
       setWeatherData(data); 
     } catch (error) {
-      console.error('Error fetching weather data:', error.message);
+      console.error('An error occured:', error.message);
     }
   };
 
@@ -46,7 +40,7 @@ function Search({ handleChange, searchString }) {
         />
         <button id='searchbutton' type="submit">Search</button>
       </form>
-
+      <br/>
       {weatherData && <Result weatherData={weatherData} />}
     </>
   );

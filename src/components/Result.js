@@ -1,17 +1,20 @@
 import React from 'react';
+import "./Result.css"
 
 function Result({ weatherData }) {
   if (!weatherData) {
-    return <h1>None</h1>; 
+    return null; 
   }
-
   return (
+    
     <div>
-      <h2>Weather Results</h2>
-      <p>City: {weatherData.name}</p>
-      <p>Temperature: {weatherData.main.temp}</p>
+      <hr/>
+      <h2 id='title'>Weather Results</h2>
+      <p id='cityname'>City: {weatherData.name }, {weatherData.sys.country}</p>
+      <p id='temperture'>Temperature: {weatherData.main.temp} °F</p>
     </div>
   );
 }
+
 
 export default Result;
