@@ -1,12 +1,19 @@
+
 import './Search.css';
 
-const Search = ({ handleChange, searchString, handleFormSubmit}) => {
+const Search = ({ handleChange, searchString, handleFormSubmit }) => {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    handleFormSubmit(event);
+  };
+
   return (
     <>
       <div id='searchcomponent'>
         <br />
         <h1 id="searchtitle">💨⛈️ Search Here To See the Weather Where You Are ❄️☀️</h1>
-        <form onSubmit={handleFormSubmit} id="searchform">
+        <form onSubmit={handleSubmit} id="searchform">
           <input
             className='inputs'
             type="text"
@@ -25,6 +32,8 @@ const Search = ({ handleChange, searchString, handleFormSubmit}) => {
 }
 
 export default Search;
+
+
 
 
 

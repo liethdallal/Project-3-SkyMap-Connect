@@ -1,30 +1,34 @@
 ### Your project idea
 
-A Weather Tracker application. It incorporates a weather API that allows the user to search for the weather in their area!
+An application called SkyMap Connect. It incorporates a weather API and google maps API that allows the user to search for the weather in their area and also navigate to see what is around them.
 
 ### List of components and their children components if any
 
 -Header Component
 
--Forcast Component (displays result)
+-Result Component (displays result)
 
--Search Form Component
+-Search Component (search form)
+
+-MapDisplay Component (displays result)
 
 -Footer Component
 
+The way this will work is the search form input will apply to both the MapDisplay Component and the Result componnet by passing the long and lat of the location of the city to map it.
+
 ### User stories
 
--As the user I want to be able to search any city I live in or visit to see a forecast of what the weather will be like
+-As the user I want to be able to search any city I live in or visit to see what the weather is and what is around me
 
--As the user I want to be able to see details at specific times of that weather
+-As the user I want to be able to see a map displaying all roads and locations
 
--As the user I want to be able to have a list to choose from to just see what the weather is like around the world
+-As the user I want to be able to navigate around the map and see where things are
 
 -As the user I want the application to be easily accessible
 
 ### MVP
 
--Needs an API
+-Needs an API from google maps and openweather
 
 -I want the search form to be fully operational
 
@@ -34,8 +38,8 @@ A Weather Tracker application. It incorporates a weather API that allows the use
 
 ### Stretch Goals
 
--Make a full detailed display of specific days the user clicks on
+-sign in functionality to add a To do list depending on the location searched (this is a big streetch goal)
 
 ### Wireframes
 
-![Screenshot 2023-11-20 at 10 11 35 PM](https://media.git.generalassemb.ly/user/49500/files/5f271c97-983f-472f-be59-b7b5a439deb0)
+<img width="1487" alt="Screenshot 2023-11-23 at 1 41 01 PM" src="https://media.git.generalassemb.ly/user/49500/files/8ec2ab35-2a20-4aa9-aa5e-861b9f4af5b8">

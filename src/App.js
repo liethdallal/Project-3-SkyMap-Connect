@@ -3,26 +3,33 @@ import Search from './components/Search';
 import Result from './components/Result';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MapDisplay from './components/MapDisplay';
+
 
 function App() {
   const [searchString, setSearchString] = useState('');
-  const REACT_APP_API_KEY = process.env.REACT_APP_API_KEY;
+  const REACT_APP_WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
   const [weatherData, setWeatherData] = useState(null);
+  const [coordinates, setCoordinates] = useState({ lat: 0, lon: 0 });
 
   const fetchRandomWeather = useCallback(async () => {
     const places = ['New York', 'Los Angeles', 'London', 'Tokyo', 'Sydney'];
     const randomPlace = places[Math.floor(Math.random() * places.length)];
 
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomPlace}&appid=${REACT_APP_API_KEY}&units=imperial`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${randomPlace}&appid=${REACT_APP_WEATHER_API_KEY}&units=imperial`);
     const data = await response.json();
 
     return data;
-  }, [REACT_APP_API_KEY]);
+  }, [REACT_APP_WEATHER_API_KEY]);
 
   useEffect(() => {
     const getRandomWeather = async () => {
       const data = await fetchRandomWeather();
       setWeatherData(data);
+
+      if (data && data.coord) {
+        setCoordinates({ lat: data.coord.lat, lon: data.coord.lon });
+      }
     };
 
     getRandomWeather();
@@ -32,7 +39,7 @@ function App() {
     event.preventDefault();
 
     const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
-    const url = `${baseUrl}?q=${searchString}&appid=${REACT_APP_API_KEY}&units=imperial`;
+    const url = `${baseUrl}?q=${searchString}&appid=${REACT_APP_WEATHER_API_KEY}&units=imperial`;
 
     try {
       const response = await fetch(url);
@@ -43,6 +50,10 @@ function App() {
       const data = await response.json();
       console.log('info:', data);
       setWeatherData(data);
+
+      if (data && data.coord) {
+        setCoordinates({ lat: data.coord.lat, lon: data.coord.lon });
+      }
     } catch (error) {
       console.error('An error occurred:', error.message);
     }
@@ -56,6 +67,7 @@ function App() {
     <>
       <Header />
       <Search handleChange={handleChange} searchString={searchString} handleFormSubmit={handleFormSubmit} />
+      <MapDisplay lat={coordinates.lat} lng={coordinates.lon} isFormSubmitted={!!weatherData} />
       <Result weatherData={weatherData} />
       <Footer />
     </>

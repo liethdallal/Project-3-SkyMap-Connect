@@ -4,6 +4,9 @@ import './Result.css';
 function Result({ weatherData }) {
   return (
     <>
+    <div id='datacontainer'>
+
+  
       {weatherData ? (
         <div>
           <h2 id='title'>Weather Results</h2>
@@ -15,6 +18,7 @@ function Result({ weatherData }) {
           <p>No results found for the entered city.</p>
         </div>
       )}
+        </div>
     </>
   );
 }

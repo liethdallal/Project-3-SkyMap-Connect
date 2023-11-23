@@ -1,4 +1,4 @@
-#footerbox {
+footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,6 +10,4 @@
     text-align: center;
     font-size: 18px;
     line-height: 1.5;
-    margin-top: 830px;
-
   }
