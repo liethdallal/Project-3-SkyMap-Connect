@@ -7,7 +7,7 @@ function Header() {
 
         <div id="headerbox">
             <img id="logo" src= {logo} alt="logo" />
-            <h1>Welcome To My Weather-Tracker Application</h1>
+            <h1>SkyMap Connect</h1>
             <img id="logo" src= {logo} alt="logo" />
         </div>
 
