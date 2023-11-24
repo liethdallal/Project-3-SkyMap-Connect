@@ -12,7 +12,7 @@ const Search = ({ handleChange, searchString, handleFormSubmit }) => {
     <>
       <div id='searchcomponent'>
         <br />
-        <h1 id="searchtitle">💨⛈️ Search Here To See the Weather Where You Are ❄️☀️</h1>
+        <h1 id="searchtitle">💨⛈️ Search Here To See Information About Any City! ❄️☀️</h1>
         <form onSubmit={handleSubmit} id="searchform">
           <input
             className='inputs'
