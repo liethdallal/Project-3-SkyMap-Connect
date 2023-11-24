@@ -38,8 +38,7 @@ function App() {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
-    const url = `${baseUrl}?q=${searchString}&appid=${WEATHER_API_KEY}&units=imperial`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchString}&appid=${WEATHER_API_KEY}&units=imperial`;
 
     try {
       const response = await fetch(url);
@@ -75,5 +74,5 @@ function App() {
 }
 
 export default App;
-//testing 3
+
 

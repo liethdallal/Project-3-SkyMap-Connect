@@ -3,13 +3,17 @@
 }
 #title{
 font-size: 55px;
+text-align: center;
+
 }
 #cityname{
     font-size: 55px;
-
+text-align: center;
 }
 #temperture{
     font-size: 55px;
+text-align: center;
+
 
 }
 
