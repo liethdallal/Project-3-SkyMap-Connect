@@ -43,7 +43,8 @@ function App() {
     try {
       const response = await fetch(url);
       if (!response.ok) {
-        throw new Error('no response');
+        setCoordinates({ lat: 0, lon: 0 });
+        setWeatherData(null);
       }
 
       const data = await response.json();
@@ -52,6 +53,9 @@ function App() {
 
       if (data && data.coord) {
         setCoordinates({ lat: data.coord.lat, lon: data.coord.lon });
+      } else {
+        setCoordinates({ lat: 0, lon: 0 });
+        setWeatherData(null);
       }
     } catch (error) {
       console.error('An error occurred:', error.message);

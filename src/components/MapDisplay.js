@@ -12,8 +12,7 @@ const MapDisplay = ({ lat, lng, isFormSubmitted }) => {
         version: 'weekly',
       });
 
-      loader.load().then(
-        () => {
+      loader.load().then( () => {
           const mapOptions = {
             center: { lat, lng },
             zoom: 14,
