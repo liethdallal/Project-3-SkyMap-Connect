@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Result.css';
+import CityPic from "./city.png"
+import ConditionsPic from "./conditions.jpg"
+import HumidityPic from"./humidity.png"
+import TemperturePic from "./temperture.png"
+import WindSpeed from "./windspeed.png"
+
 
 function Result({ weatherData }) {
   const [reload, setReload] = useState(0);
@@ -14,11 +20,11 @@ function Result({ weatherData }) {
         <div className='scale-up-center'>
           <h2 id='title'>Weather Information</h2>
           <div id='info-container'>
-            <p id='cityname'>City: {weatherData.name}, {weatherData.sys.country}</p>
-            <p id='conditions'>Conditions: {weatherData.weather[0].main}</p>
-            <p id='temperture'>Temperature: {weatherData.main.temp} °F</p>
-            <p id="humidity">Humidity: {weatherData.main.humidity}</p>
-            <p id="windspeed">Wind Speed: {weatherData.wind.speed} miles/hour</p>
+            <p id='cityname'><img id='icons' src={CityPic} alt='City Name'/> <br/> {weatherData.name}, {weatherData.sys.country}</p>
+            <p id='conditions'><img id='icons' src={ConditionsPic} alt='Conditions'/> <br/>  {weatherData.weather[0].main}</p>
+            <p id='temperture'><img id='icons' src={TemperturePic} alt='Temperture'/> <br/>  {weatherData.main.temp} °F</p>
+            <p id="humidity"><img id='icons' src={HumidityPic} alt='Humidity'/> <br/> {weatherData.main.humidity}</p>
+            <p id="windspeed"><img id='icons' src={WindSpeed} alt='WindSpeed'/> <br/>  {weatherData.wind.speed} m/h</p>
           </div>
         </div>
       ) : (

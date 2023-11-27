@@ -21,6 +21,7 @@ const Search = ({ handleChange, searchString, handleFormSubmit }) => {
             required
             onChange={handleChange}
             value={searchString}
+            spellCheck
           />
           <button id='searchbutton' type="submit">Search</button>
         </form>
