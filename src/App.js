@@ -48,7 +48,6 @@ function App() {
       }
 
       const data = await response.json();
-      console.log('info:', data);
       setWeatherData(data);
 
       if (data && data.coord) {
