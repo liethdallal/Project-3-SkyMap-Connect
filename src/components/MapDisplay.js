@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Loader } from "@googlemaps/js-api-loader";
-import "./MapDisplay.css"
+import "./css/MapDisplay.css"
 
 const MapDisplay = ({ lat, lng, isFormSubmitted }) => {
   const mapContainerRef = useRef(null);

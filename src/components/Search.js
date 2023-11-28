@@ -1,5 +1,5 @@
 
-import './Search.css';
+import './css/Search.css';
 
 const Search = ({ handleChange, searchString, handleFormSubmit }) => {
 

@@ -8,6 +8,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 18px;
+margin: 30px;
 }
 .inputs {
     font-size: 30px;

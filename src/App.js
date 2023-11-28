@@ -8,9 +8,10 @@ import MapDisplay from './components/MapDisplay';
 
 function App() {
   const [searchString, setSearchString] = useState('');
-  const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
   const [weatherData, setWeatherData] = useState(null);
   const [coordinates, setCoordinates] = useState({ lat: 0, lon: 0 });
+  const WEATHER_API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
+
 
   const fetchRandomWeather = useCallback(async () => {
     const cities = ['Chicago', 'Aurora', 'Rockford', 'Joliet', 'Naperville', 'Springfield', 'Peoria', 'Elgin', 'Waukegan', 'Champaign'];

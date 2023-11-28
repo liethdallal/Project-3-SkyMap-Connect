@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import './Result.css';
-import CityPic from "./city.png"
-import ConditionsPic from "./conditions.jpg"
-import HumidityPic from"./humidity.png"
-import TemperturePic from "./temperture.png"
-import WindSpeedPic from "./windspeed.png"
+import './css/Result.css';
+import CityPic from "./imgs/city.png"
+import ConditionsPic from "./imgs/conditions.jpg"
+import HumidityPic from"./imgs/humidity.png"
+import TemperturePic from "./imgs/temperture.png"
+import WindSpeedPic from "./imgs/windspeed.png"
 
 
 function Result({ weatherData }) {
