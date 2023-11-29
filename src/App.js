@@ -53,6 +53,7 @@ function App() {
 
       if (data && data.coord) {
         setCoordinates({ lat: data.coord.lat, lon: data.coord.lon });
+        console.log(data);
       } else {
         setCoordinates({ lat: 0, lon: 0 });
         setWeatherData(null);
@@ -78,4 +79,8 @@ function App() {
 }
 
 export default App;
+
+//Instead of new api i will pull data from openweatherapi
+
+
 

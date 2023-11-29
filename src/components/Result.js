@@ -10,6 +10,11 @@ import WindSpeedPic from "./imgs/windspeed.png"
 function Result({ weatherData }) {
   const [reload, setReload] = useState(0);
 
+  const convertUnixTimestamp = (timestamp) => {
+    const dateObject = new Date(timestamp * 1000); 
+    return dateObject.toLocaleString();
+  };
+
   useEffect(() => {
     setReload(prevReload => prevReload + 1);
   }, [weatherData]);
@@ -43,7 +48,9 @@ function Result({ weatherData }) {
                 <div className="overlay-text">Condition</div>
               </div>
 
-              <br/>  {weatherData.weather[0].main}
+              <br/>  {weatherData.weather[0].main} =
+
+              <br/> {weatherData.weather[0].description}
 
             </div>
 
@@ -58,6 +65,53 @@ function Result({ weatherData }) {
               <br/>  {weatherData.main.temp} °F
             
             </div>
+
+            {/* ----------------------------------------------------------------------------------------------------------------------------------------New Content */}
+            <div id='temperture'> 
+
+              <div className="image-container">
+                <img id='icons' src={TemperturePic} alt='Temperture'/> 
+                <div className="overlay-text">Sunrise</div>
+              </div>
+
+              <br/>  {convertUnixTimestamp(weatherData.sys.sunrise)} 
+            
+            </div>
+
+            <div id='temperture'> 
+
+              <div className="image-container">
+                <img id='icons' src={TemperturePic} alt='Temperture'/> 
+                <div className="overlay-text">Sunset</div>
+              </div>
+
+              <br/>  {convertUnixTimestamp(weatherData.sys.sunset)} 
+            
+            </div>
+            <div id='temperture'> 
+
+              <div className="image-container">
+                <img id='icons' src={TemperturePic} alt='Temperture'/> 
+                <div className="overlay-text">Coordinates</div>
+              </div>
+
+              <br/>  Longtitude = {weatherData.coord.lon} 
+              <br/>  Latitude = {weatherData.coord.lat}
+            
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            
+            {/* ----------------------------------------------------------------------------------------------------------------------------------------New Content */}
 
 
             <div id="humidity"> 
@@ -76,10 +130,10 @@ function Result({ weatherData }) {
             
               <div className="image-container">
                 <img id='icons' src={WindSpeedPic} alt='WindSpeed'/> 
-                <div className="overlay-text">WindSpeed</div>
+                <div className="overlay-text">WindSpeed <br/> (meters/second)</div>
               </div>
 
-              <br/>  {weatherData.wind.speed} m/h
+              <br/>  {weatherData.wind.speed} m/s
             
             </div>
 
