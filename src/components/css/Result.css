@@ -15,13 +15,14 @@ font-size: 50px;
 text-align: center;
 }
 .logo-text{
-font-size: 27px;
+font-size: 21px;
 text-align: center;
 }
 #info-container{
     display: flex;
     justify-content:space-evenly;
     flex-wrap: wrap;
+    gap: 15px;
 }
 #noresults{
   font-size: 150px;
@@ -36,6 +37,7 @@ text-align: center;
 #icons {
 height: 150px;
 width: 150px;
+animation: whitec 1s infinite alternate;
 }
 .image-container {
   position: relative;
@@ -94,6 +96,14 @@ width: 150px;
     }
     100% {
       box-shadow: 0 0 10px 5px aqua, 0 0 15px 10px aqua; /* Adjust the color as needed */
+    }
+  }
+  @keyframes whitec {
+    0% {
+      box-shadow: 0 0 5px 2px white, 0 0 10px 5px white; /* Adjust the color as needed */
+    }
+    100% {
+      box-shadow: 0 0 10px 5px white, 0 0 15px 10px white; /* Adjust the color as needed */
     }
   }
   /* The Credit for the animation goes to /* ----------------------------------------------

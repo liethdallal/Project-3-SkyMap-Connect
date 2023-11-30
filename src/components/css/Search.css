@@ -8,15 +8,20 @@
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 18px;
+gap: 48px;
 margin: 30px;
 }
 .inputs {
     font-size: 30px;
     text-align: center;
+  animation: whitec 1s infinite alternate; 
+    
 }
 #searchbutton{
 font-size: 30px;
+animation: electric 1s infinite alternate; 
+
+
 
 }
 button:hover{
@@ -27,6 +32,7 @@ button:hover{
     height: 200px;
     margin: 40px;
   animation: electric 1s infinite alternate; 
+  
 
 }
 @keyframes electric {
@@ -35,5 +41,13 @@ button:hover{
     }
     100% {
       box-shadow: 0 0 10px 5px aqua, 0 0 15px 10px aqua;
+    }
+  }
+  @keyframes whitec {
+    0% {
+      box-shadow: 0 0 5px 2px white, 0 0 10px 5px white; /* Adjust the color as needed */
+    }
+    100% {
+      box-shadow: 0 0 10px 5px white, 0 0 15px 10px white; /* Adjust the color as needed */
     }
   }
