@@ -1,7 +1,8 @@
 #searchtitle{
     text-align: center;
-    color: #fff;
+    color: white;
     margin: 0px;
+    font-size: 40px;
 }
 #searchform {
 display: flex;
@@ -23,5 +24,16 @@ button:hover{
 }
 #searchcomponent{
     background-color: black;
-    height: 100px;
+    height: 200px;
+    margin: 40px;
+  animation: electric 1s infinite alternate; 
+
 }
+@keyframes electric {
+    0% {
+      box-shadow: 0 0 5px 2px aqua, 0 0 10px 5px aqua;
+    }
+    100% {
+      box-shadow: 0 0 10px 5px aqua, 0 0 15px 10px aqua;
+    }
+  }

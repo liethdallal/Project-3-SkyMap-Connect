@@ -1,14 +1,30 @@
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    background-color: hsl(204, 70%, 53%);
-    color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-size: 18px;
-    line-height: 1.5;
-  }
+#footerbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-image: url("../imgs/test.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  animation: electric-footer 1s infinite alternate; /* Adjust the animation duration as needed */
+}
 
+@keyframes electric {
+  0% {
+    box-shadow: 0 0 5px 2px aqua, 0 0 10px 5px aqua;
+  }
+  100% {
+    box-shadow: 0 0 10px 5px aqua, 0 0 15px 10px aqua;
+  }
+}
+
+
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 70px;
+}

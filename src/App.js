@@ -80,7 +80,6 @@ function App() {
 
 export default App;
 
-//Instead of new api i will pull data from openweatherapi
 
 
 

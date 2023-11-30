@@ -5,6 +5,9 @@ import ConditionsPic from "./imgs/conditions.jpg"
 import HumidityPic from"./imgs/humidity.png"
 import TemperturePic from "./imgs/temperture.png"
 import WindSpeedPic from "./imgs/windspeed.png"
+import CoordinatesPic from "./imgs/coordinates.png"
+import SunrisePic from "./imgs/sunrise.jpg"
+import SunsetPics from "./imgs/sunset.jpg"
 
 
 function Result({ weatherData }) {
@@ -24,12 +27,12 @@ function Result({ weatherData }) {
       {weatherData ? (
         <div className='scale-up-center'>
 
-          <h2 id='title'>Weather Information</h2>
+          <h2 id='title'>Location Information</h2>
           <br/>
 
           <div id='info-container'>
 
-            <div id='cityname'>
+            <div className='logo-text'>
 
               <div className="image-container">
                 <img id='icons' src={CityPic} alt='City Name'/> 
@@ -41,21 +44,20 @@ function Result({ weatherData }) {
             </div>
 
 
-            <div id='conditions'> 
+            <div className='logo-text'> 
 
               <div className="image-container">
                 <img id='icons' src={ConditionsPic} alt='Conditions'/> 
                 <div className="overlay-text">Condition</div>
               </div>
 
-              <br/>  {weatherData.weather[0].main} =
 
               <br/> {weatherData.weather[0].description}
 
             </div>
 
 
-            <div id='temperture'> 
+            <div className='logo-text'> 
 
               <div className="image-container">
                 <img id='icons' src={TemperturePic} alt='Temperture'/> 
@@ -66,32 +68,31 @@ function Result({ weatherData }) {
             
             </div>
 
-            {/* ----------------------------------------------------------------------------------------------------------------------------------------New Content */}
-            <div id='temperture'> 
+            <div className='logo-text'> 
 
               <div className="image-container">
-                <img id='icons' src={TemperturePic} alt='Temperture'/> 
-                <div className="overlay-text">Sunrise</div>
+                <img id='icons' src={SunrisePic} alt='Temperture'/> 
+                <div className="overlay-text">Date, Sunrise Time</div>
               </div>
 
               <br/>  {convertUnixTimestamp(weatherData.sys.sunrise)} 
             
             </div>
 
-            <div id='temperture'> 
+            <div className='logo-text'> 
 
               <div className="image-container">
-                <img id='icons' src={TemperturePic} alt='Temperture'/> 
-                <div className="overlay-text">Sunset</div>
+                <img id='icons' src={SunsetPics} alt='Temperture'/> 
+                <div className="overlay-text">Date, Sunset Time</div>
               </div>
 
               <br/>  {convertUnixTimestamp(weatherData.sys.sunset)} 
             
             </div>
-            <div id='temperture'> 
+            <div className='logo-text'> 
 
               <div className="image-container">
-                <img id='icons' src={TemperturePic} alt='Temperture'/> 
+                <img id='icons' src={CoordinatesPic} alt='Temperture'/> 
                 <div className="overlay-text">Coordinates</div>
               </div>
 
@@ -100,21 +101,7 @@ function Result({ weatherData }) {
             
             </div>
 
-
-
-
-
-
-
-
-
-
-
-            
-            {/* ----------------------------------------------------------------------------------------------------------------------------------------New Content */}
-
-
-            <div id="humidity"> 
+            <div className='logo-text'> 
 
               <div className="image-container">
                   <img id='icons' src={HumidityPic} alt='Humidity'/> 
@@ -125,8 +112,7 @@ function Result({ weatherData }) {
             
             </div>
 
-
-            <div id="windspeed"> 
+            <div className='logo-text'> 
             
               <div className="image-container">
                 <img id='icons' src={WindSpeedPic} alt='WindSpeed'/> 
@@ -142,7 +128,7 @@ function Result({ weatherData }) {
         </div>
       ) : (
         <div>
-          <p className='scale-up-center' id='noresults'>No results found!</p>
+          <p className='scale-up-center' id='noresults'>No Information Found!</p>
         </div>
       )}
     </div>
