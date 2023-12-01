@@ -37,8 +37,6 @@ button:hover{
   animation: electric 1s infinite alternate; 
 border-radius: 20px;
 }
-
-
 @keyframes electric {
     0% {
       box-shadow: 0 0 5px 2px aqua, 0 0 10px 5px aqua;
@@ -54,4 +52,49 @@ border-radius: 20px;
     100% {
       box-shadow: 0 0 10px 5px white, 0 0 15px 10px white; /* Adjust the color as needed */
     }
+  }
+  @media screen and (max-width: 600px) {
+    #searchtitle{
+      text-align: center;
+      color: white;
+      margin: 0px;
+      font-size:20px;
+      padding: 10px;
+  }
+  #searchform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  }
+  .inputs {
+      font-size: 30px;
+      text-align: center;
+    animation: whitec 1s infinite alternate; 
+    border-radius: 20px;
+    width: 150px;
+      
+  }
+  #searchbutton{
+  font-size: 20px;
+  animation: whitec 1s infinite alternate; 
+  cursor: pointer;
+  border-radius: 10px;
+  width: fit-content;
+  
+  }
+  button:hover{
+      background-color: aqua;
+  }
+  #searchcomponent{
+      background-color: black;
+      height: 220px;
+       animation: electric 1s infinite alternate; 
+     border-radius: 20px;
+  }
+
+
+
+
+
   }

@@ -12,6 +12,22 @@
   animation: electric 1s infinite alternate; 
   gap: 40px;
 }
+#logo {
+  width: 70px;
+  animation: whitec 1s infinite alternate; 
+  
+}
+#logo2 {
+  width: 70px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  animation: whitec 1s infinite alternate; 
+  
+}
+#headertitle {
+  margin: 0;
+  font-size: 70px;
+}
 @keyframes electric {
   0% {
     box-shadow: 0 0 5px 2px aqua, 0 0 10px 5px aqua;
@@ -21,18 +37,39 @@
   }
 }
 
-#logo {
-  width: 70px;
-  
+@keyframes whitec {
+  0% {
+    box-shadow: 0 0 5px 2px white, 0 0 10px 5px white;
+  }
+  100% {
+    box-shadow: 0 0 10px 5px white, 0 0 15px 10px white;
+  }
 }
-#logo2 {
-  width: 70px;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  
-}
+@media screen and (max-width: 600px) {
+  #headerbox {
+   background-image: url("../imgs/test.gif");
+   background-repeat: no-repeat;
+   background-size: cover;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    animation: electric 1s infinite alternate;
+  }
+  #logo {
+    width: 40px;
+    animation: whitec 1s infinite alternate; 
+    
+  }
+  #logo2 {
+    width: 40px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    animation: whitec 1s infinite alternate; 
 
-#headertitle {
-  margin: 0;
-  font-size: 70px;
+    
+  }
+  #headertitle {
+    font-size: 20px;
+  }
+  
 }

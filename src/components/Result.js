@@ -42,7 +42,7 @@ function Result({ weatherData }) {
                 <div className="overlay-text">City, Country</div>
               </div>
                
-               <br/> {weatherData.name}, {weatherData.sys.country}
+               <br/> <h1 className="text">{weatherData.name}, {weatherData.sys.country}</h1>
                
             </div>
 
@@ -55,7 +55,7 @@ function Result({ weatherData }) {
               </div>
 
 
-              <br/> {weatherData.weather[0].description}
+              <br/> <h1 className="text">{weatherData.weather[0].description}</h1>
 
             </div>
 
@@ -63,11 +63,11 @@ function Result({ weatherData }) {
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img className='icons' src={TemperturePic} alt='Temperture'/> 
+                <img className='icons' src={TemperturePic} alt='Current Temperture'/> 
                 <div className="overlay-text">Current <br/> Temperture</div>
               </div>
 
-              <br/>  {weatherData.main.temp} °F
+              <br/> <h1 className="text"> {weatherData.main.temp} °F </h1>
             
             </div>
 
@@ -75,11 +75,11 @@ function Result({ weatherData }) {
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img className='icons' src={FeelsLikePic} alt='Temperture'/> 
+                <img className='icons' src={FeelsLikePic} alt='Temperture Feels Like'/> 
                 <div className="overlay-text"> Feels like</div>
               </div>
 
-               <br/>  {weatherData.main.feels_like} °F
+               <br/>  <h1 className="text">{weatherData.main.feels_like} °F </h1>
 
             </div>
 
@@ -87,71 +87,36 @@ function Result({ weatherData }) {
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img className='icons' src={HighestTempPic} alt='Temperture'/> 
+                <img className='icons' src={HighestTempPic} alt='Highest Temperture'/> 
                 <div className="overlay-text">  Highest <br/> temperture</div>
               </div>
 
-             <br/>  {weatherData.main.temp_max} °F
+             <br/>  <h1 className="text">{weatherData.main.temp_max} °F </h1>
 
             </div>
 
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img className='icons' src={LowestTempPic} alt='Temperture'/> 
+                <img className='icons' src={LowestTempPic} alt='Lowest Temperture'/> 
                 <div className="overlay-text">  Lowest <br/> temperture</div>
               </div>
 
-              <br/>  {weatherData.main.temp_min} °F
+              <br/> <h1 className="text"> {weatherData.main.temp_min} °F </h1>
 
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img className='icons' src={SunrisePic} alt='Temperture'/> 
-                <div className="overlay-text">Date, Sunrise Time</div>
+                <img className='icons' src={CoordinatesPic} alt='Coordinates'/> 
+                <div className="overlay-text">lon, lat</div>
               </div>
 
-              <br/>  {convertUnixTimestamp(weatherData.sys.sunrise)} 
-            
-            </div>
-
-            <div className='logo-text'> 
-
-              <div className="image-container">
-                <img className='icons' src={SunsetPics} alt='Temperture'/> 
-                <div className="overlay-text">Date, Sunset Time</div>
-              </div>
-
-              <br/>  {convertUnixTimestamp(weatherData.sys.sunset)} 
-            
-            </div>
-            <div className='logo-text'> 
-
-              <div className="image-container">
-                <img className='icons' src={CoordinatesPic} alt='Temperture'/> 
-                <div className="overlay-text">Coordinates</div>
-              </div>
-
-              <br/>  Longtitude = {weatherData.coord.lon} 
-              <br/>  Latitude = {weatherData.coord.lat}
+              <br/>  <h1 className="text">{weatherData.coord.lon} 
+              <br/>      {weatherData.coord.lat}
+                     </h1>
             
             </div>
 
@@ -162,7 +127,7 @@ function Result({ weatherData }) {
                   <div className="overlay-text">Humidity</div>
               </div>
 
-              <br/> {weatherData.main.humidity}
+              <br/> <h1 className="text"> {weatherData.main.humidity} </h1>
             
             </div>
 
@@ -173,9 +138,31 @@ function Result({ weatherData }) {
                 <div className="overlay-text">WindSpeed <br/> (meters/second)</div>
               </div>
 
-              <br/>  {weatherData.wind.speed} m/s
+              <br/> <h1 className="text">  {weatherData.wind.speed} m/s </h1>
             
             </div>
+
+            <div className='logo-text'> 
+
+            <div className="image-container">
+              <img className='icons' src={SunrisePic} alt='Sunrise'/> 
+              <div className="overlay-text">Date, Sunrise Time</div>
+            </div>
+
+            <br/> <h1 className="text"> {convertUnixTimestamp(weatherData.sys.sunrise)} </h1>
+
+           </div>
+
+           <div className='logo-text'> 
+
+            <div className="image-container">
+              <img className='icons' src={SunsetPics} alt='Sunset'/> 
+              <div className="overlay-text">Date, Sunset Time</div>
+            </div>
+
+            <br/> <h1 className="text"> {convertUnixTimestamp(weatherData.sys.sunset)} </h1>
+
+          </div>
 
           </div>
 
@@ -184,7 +171,7 @@ function Result({ weatherData }) {
         <div>
           <p className='scale-up-center' id='noresults'>No Information Found!
           <br/>
-          <img id='noinfo' src={PersonSittingInRainPic} alt='WindSpeed'/> 
+          <img id='noinfo' src={PersonSittingInRainPic} alt='No Results'/> 
           </p>
 
         </div>
