@@ -1,38 +1,33 @@
 
-import './css/Search.css';
+import './css/Search.css'
 
-const Search = ({ handleChange, searchString, handleFormSubmit }) => {
+const Search = ({ handleChange, searchString, handleFormSubmit }) => { //props defined in App.js
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    handleFormSubmit(event);
-  };
-
-  return (
+    return ( //takes users input and sends that input to fetch from the API's
     <>
-      <div id='searchcomponent'>
+      <div id='searchcomponent'> 
         <br />
-        <h1 id="searchtitle">💨⛈️ Search Here To See Information About Any City! ❄️☀️</h1>
-        <form onSubmit={handleSubmit} id="searchform">
+        <h1 id='searchtitle'>💨⛈️ Search Here To See Information About Any City! ❄️☀️</h1>
+        <form onSubmit={handleFormSubmit} id='searchform'>
           <input
             className='inputs'
-            type="text"
-            placeholder="City"
+            type='text'
+            placeholder='City'
             required
             onChange={handleChange}
             value={searchString}
             spellCheck
           />
-          <button id='searchbutton' type="submit">Search</button>
+          <button id='searchbutton' type='submit'>Search</button>
         </form>
       </div>
 
       <br/>
     </>
-  );
+  )
 }
 
-export default Search;
+export default Search
 
 
 
