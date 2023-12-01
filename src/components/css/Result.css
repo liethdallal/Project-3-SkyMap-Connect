@@ -1,7 +1,7 @@
 #datacontainer{
 animation: electric-footer 1s infinite alternate; /* Adjust the animation duration as needed */
 margin: 5dvh;
-height: 500px;
+height: 600px;
 background-color: black;
 }
 /* Credit goes to https://cssbud.com/css-generator/css-glow-generator/ */
@@ -22,10 +22,11 @@ text-align: center;
     display: flex;
     justify-content:space-evenly;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 30px;
+    padding: 30px;
 }
 #noresults{
-  font-size: 150px;
+  font-size: 100px;
   text-align: center;
 }
 
@@ -34,9 +35,9 @@ text-align: center;
 	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-#icons {
-height: 150px;
-width: 150px;
+.icons {
+height: 175px;
+width: 175px;
 animation: whitec 1s infinite alternate;
 }
 .image-container {
@@ -46,8 +47,6 @@ animation: whitec 1s infinite alternate;
 
 .image-container img {
   display: block;
-  width: 100%;
-  height: auto;
 }
 
 .overlay-text {
@@ -66,6 +65,14 @@ animation: whitec 1s infinite alternate;
 
 .image-container:hover .overlay-text {
   opacity: 1; 
+}
+#noinfo{
+
+  width: 700px;
+  height: 400px;
+animation: whitec 1s infinite alternate;
+
+
 }
 
 
@@ -118,3 +125,5 @@ animation: whitec 1s infinite alternate;
   * animation scale-up-center
   * ----------------------------------------
   */ 
+
+  /* add media quory for a max width of 1050px */

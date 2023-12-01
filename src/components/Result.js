@@ -8,7 +8,10 @@ import WindSpeedPic from "./imgs/windspeed.png"
 import CoordinatesPic from "./imgs/coordinates.png"
 import SunrisePic from "./imgs/sunrise.jpg"
 import SunsetPics from "./imgs/sunset.jpg"
-
+import HighestTempPic from "./imgs/hightemp.png"
+import LowestTempPic from "./imgs/images.png"
+import FeelsLikePic from "./imgs/feelslike.jpg"
+import PersonSittingInRainPic from "./imgs/sad-boy-with-rain-sad.gif"
 
 function Result({ weatherData }) {
   const [reload, setReload] = useState(0);
@@ -35,7 +38,7 @@ function Result({ weatherData }) {
             <div className='logo-text'>
 
               <div className="image-container">
-                <img id='icons' src={CityPic} alt='City Name'/> 
+                <img className='icons' src={CityPic} alt='City Name'/> 
                 <div className="overlay-text">City, Country</div>
               </div>
                
@@ -47,8 +50,8 @@ function Result({ weatherData }) {
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img id='icons' src={ConditionsPic} alt='Conditions'/> 
-                <div className="overlay-text">Condition</div>
+                <img className='icons' src={ConditionsPic} alt='Conditions'/> 
+                <div className="overlay-text">Current <br/> Condition</div>
               </div>
 
 
@@ -60,18 +63,69 @@ function Result({ weatherData }) {
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img id='icons' src={TemperturePic} alt='Temperture'/> 
-                <div className="overlay-text">Temperture</div>
+                <img className='icons' src={TemperturePic} alt='Temperture'/> 
+                <div className="overlay-text">Current <br/> Temperture</div>
               </div>
 
               <br/>  {weatherData.main.temp} °F
             
             </div>
 
+
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img id='icons' src={SunrisePic} alt='Temperture'/> 
+                <img className='icons' src={FeelsLikePic} alt='Temperture'/> 
+                <div className="overlay-text"> Feels like</div>
+              </div>
+
+               <br/>  {weatherData.main.feels_like} °F
+
+            </div>
+
+
+            <div className='logo-text'> 
+
+              <div className="image-container">
+                <img className='icons' src={HighestTempPic} alt='Temperture'/> 
+                <div className="overlay-text">  Highest <br/> temperture</div>
+              </div>
+
+             <br/>  {weatherData.main.temp_max} °F
+
+            </div>
+
+            <div className='logo-text'> 
+
+              <div className="image-container">
+                <img className='icons' src={LowestTempPic} alt='Temperture'/> 
+                <div className="overlay-text">  Lowest <br/> temperture</div>
+              </div>
+
+              <br/>  {weatherData.main.temp_min} °F
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div className='logo-text'> 
+
+              <div className="image-container">
+                <img className='icons' src={SunrisePic} alt='Temperture'/> 
                 <div className="overlay-text">Date, Sunrise Time</div>
               </div>
 
@@ -82,7 +136,7 @@ function Result({ weatherData }) {
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img id='icons' src={SunsetPics} alt='Temperture'/> 
+                <img className='icons' src={SunsetPics} alt='Temperture'/> 
                 <div className="overlay-text">Date, Sunset Time</div>
               </div>
 
@@ -92,7 +146,7 @@ function Result({ weatherData }) {
             <div className='logo-text'> 
 
               <div className="image-container">
-                <img id='icons' src={CoordinatesPic} alt='Temperture'/> 
+                <img className='icons' src={CoordinatesPic} alt='Temperture'/> 
                 <div className="overlay-text">Coordinates</div>
               </div>
 
@@ -104,7 +158,7 @@ function Result({ weatherData }) {
             <div className='logo-text'> 
 
               <div className="image-container">
-                  <img id='icons' src={HumidityPic} alt='Humidity'/> 
+                  <img className='icons' src={HumidityPic} alt='Humidity'/> 
                   <div className="overlay-text">Humidity</div>
               </div>
 
@@ -115,7 +169,7 @@ function Result({ weatherData }) {
             <div className='logo-text'> 
             
               <div className="image-container">
-                <img id='icons' src={WindSpeedPic} alt='WindSpeed'/> 
+                <img className='icons' src={WindSpeedPic} alt='WindSpeed'/> 
                 <div className="overlay-text">WindSpeed <br/> (meters/second)</div>
               </div>
 
@@ -128,7 +182,11 @@ function Result({ weatherData }) {
         </div>
       ) : (
         <div>
-          <p className='scale-up-center' id='noresults'>No Information Found!</p>
+          <p className='scale-up-center' id='noresults'>No Information Found!
+          <br/>
+          <img id='noinfo' src={PersonSittingInRainPic} alt='WindSpeed'/> 
+          </p>
+
         </div>
       )}
     </div>
