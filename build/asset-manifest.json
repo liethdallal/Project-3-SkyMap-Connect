@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.427d7be5.css",
+    "main.js": "/react-gh-pages/static/js/main.afad5d75.js",
+    "static/js/787.d5573fb8.chunk.js": "/react-gh-pages/static/js/787.d5573fb8.chunk.js",
+    "static/media/test.gif": "/react-gh-pages/static/media/test.769676f67d300b0c3764.gif",
+    "static/media/sad-boy-with-rain-sad.gif": "/react-gh-pages/static/media/sad-boy-with-rain-sad.88204f1327f8e45d5ae3.gif",
+    "static/media/logo.png": "/react-gh-pages/static/media/logo.671f18162137e18e9cad.png",
+    "static/media/coordinates.png": "/react-gh-pages/static/media/coordinates.bc2b1b01b86e8b477508.png",
+    "index.html": "/react-gh-pages/index.html",
+    "main.427d7be5.css.map": "/react-gh-pages/static/css/main.427d7be5.css.map",
+    "main.afad5d75.js.map": "/react-gh-pages/static/js/main.afad5d75.js.map",
+    "787.d5573fb8.chunk.js.map": "/react-gh-pages/static/js/787.d5573fb8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.427d7be5.css",
+    "static/js/main.afad5d75.js"
+  ]
+}
