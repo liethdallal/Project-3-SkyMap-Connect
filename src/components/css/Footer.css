@@ -6,7 +6,7 @@
   background-image: url("../imgs/test.gif");
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: black;
   position: relative;
   overflow: hidden;
   animation: electric-footer 1s infinite alternate; /* Adjust the animation duration as needed */
