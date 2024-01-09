@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/Project-3-SkyMap-Connect/static/css/main.bc96a9c2.css",
-    "main.js": "/Project-3-SkyMap-Connect/static/js/main.67327d3b.js",
+    "main.css": "/Project-3-SkyMap-Connect/static/css/main.1d9be9fe.css",
+    "main.js": "/Project-3-SkyMap-Connect/static/js/main.58a20454.js",
     "static/js/787.d5573fb8.chunk.js": "/Project-3-SkyMap-Connect/static/js/787.d5573fb8.chunk.js",
     "static/media/test.gif": "/Project-3-SkyMap-Connect/static/media/test.769676f67d300b0c3764.gif",
     "static/media/sad-boy-with-rain-sad.gif": "/Project-3-SkyMap-Connect/static/media/sad-boy-with-rain-sad.88204f1327f8e45d5ae3.gif",
+    "static/media/logo.png": "/Project-3-SkyMap-Connect/static/media/logo.671f18162137e18e9cad.png",
+    "static/media/lieth_dallal_logo (2).png": "/Project-3-SkyMap-Connect/static/media/lieth_dallal_logo (2).143e5018ed6f255be868.png",
     "static/media/coordinates.png": "/Project-3-SkyMap-Connect/static/media/coordinates.bc2b1b01b86e8b477508.png",
     "index.html": "/Project-3-SkyMap-Connect/index.html",
-    "main.bc96a9c2.css.map": "/Project-3-SkyMap-Connect/static/css/main.bc96a9c2.css.map",
-    "main.67327d3b.js.map": "/Project-3-SkyMap-Connect/static/js/main.67327d3b.js.map",
+    "main.1d9be9fe.css.map": "/Project-3-SkyMap-Connect/static/css/main.1d9be9fe.css.map",
+    "main.58a20454.js.map": "/Project-3-SkyMap-Connect/static/js/main.58a20454.js.map",
     "787.d5573fb8.chunk.js.map": "/Project-3-SkyMap-Connect/static/js/787.d5573fb8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc96a9c2.css",
-    "static/js/main.67327d3b.js"
+    "static/css/main.1d9be9fe.css",
+    "static/js/main.58a20454.js"
   ]
 }
