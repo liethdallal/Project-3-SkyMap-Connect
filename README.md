@@ -1,4 +1,5 @@
-### Your project idea
+### SkyMap Connect
+<img src="./src/components/imgs/Skymap Connect.png">
 
 An application called SkyMap Connect. It incorporates a weather API and google maps API that allows the user to search for the weather in their area and also navigate to see what is around them.
 

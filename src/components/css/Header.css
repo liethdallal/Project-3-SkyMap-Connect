@@ -10,18 +10,17 @@
   position: relative;
   overflow: hidden;
   animation: electric 1s infinite alternate; 
-  gap: 40px;
+  gap: 20px;
 }
+
 #logo {
   width: 70px;
-  animation: whitec 1s infinite alternate; 
   
 }
 #logo2 {
   width: 70px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  animation: whitec 1s infinite alternate; 
   
 }
 #headertitle {
@@ -50,21 +49,19 @@
    background-image: url("../imgs/test.gif");
    background-repeat: no-repeat;
    background-size: cover;
-    color: white;
+    color: black;
     position: relative;
     overflow: hidden;
     animation: electric 1s infinite alternate;
   }
   #logo {
     width: 40px;
-    animation: whitec 1s infinite alternate; 
     
   }
   #logo2 {
     width: 40px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    animation: whitec 1s infinite alternate; 
 
     
   }
@@ -72,4 +69,10 @@
     font-size: 20px;
   }
   
+}
+@media screen and (max-width: 1270px ) and (min-width: 615px) {
+  #headertitle {
+    font-size: 50px;
+  }
+
 }

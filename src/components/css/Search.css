@@ -1,9 +1,9 @@
 #searchtitle{
-    text-align: center;
-    color: white;
-    margin: 0px;
-    font-size: 30px;
-    padding: 10px;
+  text-align: center;
+  color: white;
+  margin: 0px;
+  font-size: 30px;
+  padding: 10px;
 }
 #searchform {
 display: flex;
@@ -14,17 +14,69 @@ margin: 30px;
 
 }
 .inputs {
-    font-size: 30px;
-    text-align: center;
-  animation: whitec 1s infinite alternate; 
-  border-radius: 20px;
-    
+  font-size: 30px;
+  text-align: center;
+border-radius: 20px;
+  
 }
 #searchbutton{
 font-size: 30px;
-animation: whitec 1s infinite alternate; 
 cursor: pointer;
 border-radius: 10px;
+
+}
+button:hover{
+  background-color: aqua;
+}
+#searchcomponent{
+  background-color: black;
+  height: 200px;
+  margin: 40px;
+animation: electric 1s infinite alternate; 
+border-radius: 20px;
+}
+@keyframes electric {
+  0% {
+    box-shadow: 0 0 5px 2px aqua, 0 0 10px 5px aqua;
+  }
+  100% {
+    box-shadow: 0 0 10px 5px aqua, 0 0 15px 10px aqua;
+  }
+}
+@keyframes whitec {
+  0% {
+    box-shadow: 0 0 5px 2px white, 0 0 10px 5px white; /* Adjust the color as needed */
+  }
+  100% {
+    box-shadow: 0 0 10px 5px white, 0 0 15px 10px white; /* Adjust the color as needed */
+  }
+}
+@media screen and (max-width: 600px) {
+  #searchtitle{
+    text-align: center;
+    color: white;
+    margin: 0px;
+    font-size:20px;
+    padding: 10px;
+}
+#searchform {
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.inputs {
+    font-size: 30px;
+    text-align: center;
+  border-radius: 20px;
+  width: 150px;
+    
+}
+#searchbutton{
+font-size: 20px;
+cursor: pointer;
+border-radius: 10px;
+width: fit-content;
 
 }
 button:hover{
@@ -32,69 +84,13 @@ button:hover{
 }
 #searchcomponent{
     background-color: black;
-    height: 200px;
-    margin: 40px;
-  animation: electric 1s infinite alternate; 
-border-radius: 20px;
+    height: 220px;
+     animation: electric 1s infinite alternate; 
+   border-radius: 20px;
 }
-@keyframes electric {
-    0% {
-      box-shadow: 0 0 5px 2px aqua, 0 0 10px 5px aqua;
-    }
-    100% {
-      box-shadow: 0 0 10px 5px aqua, 0 0 15px 10px aqua;
-    }
-  }
-  @keyframes whitec {
-    0% {
-      box-shadow: 0 0 5px 2px white, 0 0 10px 5px white; /* Adjust the color as needed */
-    }
-    100% {
-      box-shadow: 0 0 10px 5px white, 0 0 15px 10px white; /* Adjust the color as needed */
-    }
-  }
-  @media screen and (max-width: 600px) {
-    #searchtitle{
-      text-align: center;
-      color: white;
-      margin: 0px;
-      font-size:20px;
-      padding: 10px;
-  }
-  #searchform {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  }
-  .inputs {
-      font-size: 30px;
-      text-align: center;
-    animation: whitec 1s infinite alternate; 
-    border-radius: 20px;
-    width: 150px;
-      
-  }
-  #searchbutton{
-  font-size: 20px;
-  animation: whitec 1s infinite alternate; 
-  cursor: pointer;
-  border-radius: 10px;
-  width: fit-content;
-  
-  }
-  button:hover{
-      background-color: aqua;
-  }
-  #searchcomponent{
-      background-color: black;
-      height: 220px;
-       animation: electric 1s infinite alternate; 
-     border-radius: 20px;
-  }
 
 
 
 
 
-  }
+}
